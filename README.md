@@ -26,7 +26,7 @@ Hacer un benchmark (midiendo los *fps* promedio) de varias representaciones de m
 
 ### References
 
-1. [Reynolds, C. W. Flocks, Herds and Schools: A Distributed Behavioral Model. 87.](http://www.cs.toronto.edu/~dt/siggraph97-course/cwr87/).
+1. [Reynolds, C. W. Flocks, Herds and Schools: A Distributed Behavioral Model. 87](http://www.cs.toronto.edu/~dt/siggraph97-course/cwr87/).
 2. Check also this [nice presentation](https://pdfs.semanticscholar.org/73b1/5c60672971c44ef6304a39af19dc963cd0af.pdf) about the paper:
 3. There are many online sources, google for more...
 
