@@ -22,7 +22,8 @@ Hacer un benchmark (midiendo los *fps* promedio) de varias representaciones de m
 ### Profundizaciones
 
 1. Introducir el rol depredador.
-2. Implementar el algoritmo del ```flock()``` en [OpenCL](https://en.wikipedia.org/wiki/OpenCL). Ver [acá](https://www.youtube.com/watch?v=4NU37rPOAsk) un ejemplo de *Processing* en el que se que emplea [JOCL](http://www.jocl.org/).
+2. Cómo afecta el comportamiento tener en cuenta el [campo visual](https://es.wikipedia.org/wiki/Campo_visual) (individual)?
+3. Implementar el algoritmo del ```flock()``` en [OpenCL](https://en.wikipedia.org/wiki/OpenCL). Ver [acá](https://www.youtube.com/watch?v=4NU37rPOAsk) un ejemplo de *Processing* en el que se que emplea [JOCL](http://www.jocl.org/).
 
 ### References
 
