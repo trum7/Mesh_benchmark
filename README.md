@@ -44,4 +44,8 @@ Complete la tabla:
 ## Entrega
 
 * Modo de entrega: Haga [fork](https://help.github.com/articles/fork-a-repo/) de la plantilla e informe la url del repo en la hoja *urls* de la plantilla compartida (una sola vez por grupo). Plazo: 15/4/18 a las 24h.
-* Exposición oral en el taller de la siguiente semana.
+* Exposición oral en el taller de la siguiente semana (6 minutos: 4 para presentar y 2 para preguntas). Estructura sugerida:
+1. Representaciones estudiadas.
+2. Demo.
+3. Resultados (benchmark).
+4. Conclusiones.
