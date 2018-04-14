@@ -39,7 +39,78 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+| Laura Paola Cerón Martinez       | lpceronm        |
+| Camilo Andrés Dajer Piñerez      | trum7           |
+
+## Discusión
+
+  La representación la malla del Boid fue rediseñada, para darle una aspecto más parecido a un ave. Por esta razón se realizo un modelamiento en Blender usando mallas poligonales, de esta manera se obtuvo la siguiente malla poligonal:
+
+
+  ![alt](./images/editmode.png)
+
+  ![alt](./images/solid.png)
+
+  La malla poligonal posee 173 y 144 caras.
+
+  Una vez se realizo la malla poligonal, se procedio a ejecutar un script en blender que permitio exportar dos archivos, una con la información de la posición de cada una de los vertices dentro de un plano 3D, y el otro con la información de cada uno de los vertices que componen cada una de las 144 caras. De esta manera tenemos acceso a modificar la información de cada uno de los vertices y caras que componen la malla poligonal.
+
+  De esta manera fue posible hacer la representación Face-Vertex, iterando sobre los archivos donde el archivo .faces es combinado con el archivo .vertices para generar la malla poligonal.
+
+  Para la representación Vertex-Vertex, se modifico el script para obtener la información de los vertices relaciones y de esta manera almacenar la información en el archivo .vertexvertex y posteriormente leerlo en processing para renderizar la malla poligonal. 
+
+
+  1. Representaciones estudiadas.
+     
+     Para el caso de estudio, se realizaron dos representaciones:
+     
+     - _Face-vertex_ meshes
+      
+       Esta representación se realizo mediante una lista de poligonos, que contenia la informacion de los vertices asociados a cada uno de ellos. De esta manera cuando se iteraba sobre esa lista para renderizarlo, se accedia a la informacion de la ubicación espacial de cada una de los vertices.
+
+       Por lo tanto se tenia la siguiente estructura:
+
+       * Faces: 
+          | _Face_     |   _Vertex_  |
+          |------------|-------------|
+          | ID         | X X X X X X |
+          
+          Donde cada X representa uno de los vertices que componen la cara.
+
+       * Vertex:
+
+          | _Vertex_     |   _Position_  |
+          |--------------|---------------|
+          |     ID       |      X Y Z    |
+          
+          
+
+     - Vertex-vertex meshes 
+     
+        Esta representación se realizo mediante una lista de cada uno de los vertices que componen la malla poligonal, donde se contenie la informacion de los otros vertices asociados a cada uno de ellos. De esta manera cuando se iteraba sobre esa lista para renderizarlo, se accedia a la informacion de la ubicación espacial de cada una de los vertices.
+
+       * _Vertex-Vertex_: 
+          | _Vertex_     |   _Other Vertex_  |
+          |------------|-------------|
+          | ID         | X X X X X X |
+          
+          Donde cada X representa uno de los vertices que componen están relacionados con el ID.
+
+       * Vertex:
+
+          | _Vertex_     |   _Position_  |
+          |--------------|---------------|
+          |     ID       |      X Y Z    |
+
+          Donde X Y Z representan cada una de sus coordenadas espaciales. 
+
+  2. Demo.
+     
+
+  3. Resultados (benchmark).
+     
+
+  4. Conclusiones.
 
 ## Entrega
 
