@@ -55,9 +55,9 @@ Complete la tabla:
 
   Una vez se realizo la malla poligonal, se procedio a ejecutar un script en blender que permitio exportar dos archivos, una con la información de la posición de cada una de los vertices dentro de un plano 3D, y el otro con la información de cada uno de los vertices que componen cada una de las 144 caras. De esta manera tenemos acceso a modificar la información de cada uno de los vertices y caras que componen la malla poligonal.
 
-  De esta manera fue posible hacer la representación Face-Vertex, iterando sobre los archivos donde el archivo .faces es combinado con el archivo .vertices para generar la malla poligonal.
+  De esta manera fue posible hacer la representación Face-Vertex, iterando sobre ellos, donde el archivo con extension .faces es combinado con el archivo con extension .vertices, para generar la malla poligonal.
 
-  Para la representación Vertex-Vertex, se modifico el script para obtener la información de los vertices relaciones y de esta manera almacenar la información en el archivo .vertexvertex y posteriormente leerlo en processing para renderizar la malla poligonal. 
+  Para la representación Vertex-Vertex, se modifico el script para obtener la información de los vertices relaciones y de esta manera almacenar la información en el archivo con extension .vertexvertex y posteriormente leerlo en processing para renderizar la malla poligonal. 
 
 
   1. Representaciones estudiadas.
@@ -71,6 +71,7 @@ Complete la tabla:
        Por lo tanto se tenia la siguiente estructura:
 
        * Faces: 
+
           | _Face_     |   _Vertex_  |
           |------------|-------------|
           | ID         | X X X X X X |
@@ -90,6 +91,7 @@ Complete la tabla:
         Esta representación se realizo mediante una lista de cada uno de los vertices que componen la malla poligonal, donde se contenie la informacion de los otros vertices asociados a cada uno de ellos. De esta manera cuando se iteraba sobre esa lista para renderizarlo, se accedia a la informacion de la ubicación espacial de cada una de los vertices.
 
        * _Vertex-Vertex_: 
+
           | _Vertex_     |   _Other Vertex_  |
           |------------|-------------|
           | ID         | X X X X X X |
