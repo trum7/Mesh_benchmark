@@ -107,12 +107,82 @@ Complete la tabla:
           Donde X Y Z representan cada una de sus coordenadas espaciales. 
 
   2. Demo.
-     
+
+      Cuando se ejecuta el programa, se le permite al usuario cambiar entre los distintos modos (Retenido-Inmediato) - (Face-Vertex, Vertex-Vertex) , por lo tanto se agregaron las siguientes funcionalidades que se activan con la siguientes teclas:
+
+        | Tecla     |          Funcionalidad          |
+        |-----------|---------------------------------|
+        |     'r'   |  Face-Vertex y Vertex-Vertex    |
+        |     'q'   |       Retenido e Inmediato      |
+
+      ![alt](./images/1.png)
+      ![alt](./images/2.png)
+
 
   3. Resultados (benchmark).
      
+     Para realizar los benchmark de manera correcta, se realizo la comparativa de fps sobre una trayectoria de animación para el ojo empleando un interpolator. Asi aseguramos que los resultados obtenidos son comparables.
+
+     Para el caso de estudio, se realizo la comparacion entre las diferentes configuraciones, obteniendo los siguientes datos, con las siguientes configuraciones de Hardware:
+
+     - Maquina 1:
+        - Procesador: Intel Core i5-7300HQ, 4 procesadores fisicos 
+        - Grafica: NVIDIA GEFORCE GTX 1050- 4GB DDR5.
+
+        *  Benchmark - posibles escenarios:
+
+            ![alt](./images/All-1.png)
+
+        *  Modo inmediato:
+
+            ![alt](./images/Immediate-1.png)
+
+        *  Modo retenido:
+            
+            ![alt](./images/Retained-1.png)
+
+                IFV: Immediate Face-Vertex  
+                IVV: Immediate Vertex-Vertex  
+                RFV: Retained Face-Vertex   
+                RVV: Retained Vertex-Vertex 
+     
+        Adicionalmente, se realizo el benchmark en dos configuraciones de maquinas diferentes, con las siguientes caracteristicas:
+
+      - Maquina 2: 
+
+          - Procesador: Intel Core i5, 2 procesadores fisicos 
+          - Grafica: Integrada Intel-Graphics 6000 - 1GB. 
+
+          De esta manera se obtuvieron los siguientes resultados:
+
+          *  Benchmark - posibles escenarios:
+
+              ![alt](./images/2M-All.png)
+
+          *  Modo inmediato:
+
+              ![alt](./images/2M-Immediate.png)
+
+          *  Modo retenido:
+              
+              ![alt](./images/2M-Retained.png)
+
+            IFV: Immediate Face-Vertex - Maquina 1
+            IVV: Immediate Vertex-Vertex - Maquina 1
+            RFV: Retained Face-Vertex - Maquina 1
+            RVV: Retained Vertex-Vertex - Maquina 1
+            IFV-2: Immediate Face-Vertex - Maquina 2
+            IVV-2: Immediate Vertex-Vertex - Maquina 2
+            RFV-2: Retained Face-Vertex - Maquina 2
+            RVV-2: Retained Vertex-Vertex - Maquina 2
 
   4. Conclusiones.
+      
+      Se puede observar que la representación Face-Vertex es 42% más óptimo que la representacion Face-Vertex en modo inmediato. En modo Vertex-Vertex se evidencia unicamente 4% de mejoria.  
+      De la misma manera, los datos muestran que el modo retenido es 747% más óptimo que el modo inmediato, gracias a que no se debe transferir la información por cada uno de los ciclos realizados.
+
+      Por lo tanto, se puede concluir que la mejor manera de representar una malla poligonal, dentro de las configuraciones de hardware utilizadas es Face-Vertex de modo retenido, si se desea tener un mejor desempeño.
+   
 
 ## Entrega
 
