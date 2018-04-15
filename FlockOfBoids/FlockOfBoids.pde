@@ -131,7 +131,7 @@ void draw() {
   }else{
     output.flush(); // Writes the remaining data to the file
     output.close(); // Finishes the file
-    exit(); // Stops the program
+    //exit(); // Stops the program
   }  
 }
 
